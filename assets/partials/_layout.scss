@@ -1,0 +1,311 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+//BG HOME
+
+.bg-home{
+    position: relative;
+}
+.bg-home::before{    
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url('../bg.svg');
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-position: 50% 0;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+//-------------------------------
+//HERO--------------
+
+.hero{
+    color: $white-normal;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1{
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+
+    .btn-contact{
+        padding: 14px 28px;
+        color: $white-normal;
+        background-color: $red-normal;
+        border: 0;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 14px 0;
+        border-radius: 5px;
+    }
+    .btn-contact:hover{
+        animation: scaleButton 0.8s infinite alternate;
+    }
+    @keyframes scaleButton {
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(1.07);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero{
+        min-height: 60vh;
+        
+        h1{
+            width: 100%;
+            font-size: 34px;
+            padding: 0 14px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    
+}
+@media screen and (max-width: 480px){
+    .hero {
+        h1{
+            font-size: 24px;
+        }
+        p{
+            width: 200px;
+            font-size: 12px;
+            word-wrap: break-word;
+            line-height: 150%;
+            color: $red-dark;           
+        }
+    }
+
+}
+
+//-----------------------------
+//ABOUT-----------------
+.about{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+}
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+   img{
+    max-width: 570px;
+   }
+   div{
+    flex: 1;
+   }
+   
+}
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+    .aviso{
+        text-align: right;
+    }
+   .aviso > strong{
+        color: $red-dark;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 30px;
+    }
+
+}
+@media screen and (max-width:768px){
+    .about-content{
+        flex-direction: column;
+        padding: 10px 20px 60px 20px;
+        gap: 40px;
+        
+        .aviso{           
+           
+            strong{
+                font-size: 16px;
+            }
+        }
+        
+    }
+    
+}
+@media screen and (max-width:480px){
+    .aviso{
+        background-color: $white-normal;
+        color: $black-normal;
+        padding: 14px;
+        border-radius: 5px;
+        width: 100%;        
+        word-wrap: break-word; 
+       
+        strong{
+           font-size: 30px;
+            
+        }
+    }
+}
+
+
+.services{
+    width: 100%;
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+    
+}
+.services-content{
+    h2{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 14px;
+    }
+    p{
+        line-height: 150%;
+        margin-bottom: 30px;
+        text-align: center;
+        max-width: 780px;
+    }
+}
+.haircuts{    
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap:22px;
+    padding: 0 44px 34px 44px;
+}
+.haircut{ 
+    min-height: 480px; 
+    flex: 1;   
+    display: flex;   
+    flex-direction: column;
+    background-color: $white-normal;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.5);
+
+    img{
+        width: 100%;
+        height: 300px;              
+        object-fit: cover;
+        object-position:center;
+        transition: all .8s ease-in-out;
+    }
+    img:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+        z-index: 1;
+    }
+}
+.haircut-info{
+    background-color: $white-normal;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;  
+    padding: 14px;
+    h3{
+        color: $red-dark;
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+    p{
+        word-wrap: break-word;
+        font-size: 12px;
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .btn-price{
+        display: inline-flex;
+        background-color: transparent;
+        padding: 7px 14px;
+        color: $red-dark;
+        border-radius: 30px;
+        transition: all .8s ease-in-out;
+        border: 1px solid $red-dark;     
+        
+    }
+    .btn-price:hover{
+        background-color: $red-dark;
+        color: $white-normal;
+        transform: translateX(-6px);
+    }
+}
+@media screen and (max-width: 768px) {
+    .haircuts{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    
+    
+}
+
+footer{
+    padding: 30px 0;
+    background-color: $primary-normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    color: $white-normal;
+}
+
+@media screen and (max-width:480px){
+    footer{
+        padding: 20px;
+        p{
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+    
+}
