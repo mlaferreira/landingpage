@@ -309,3 +309,44 @@ footer{
     }
     
 }
+
+.btn-zap{
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 10;
+   
+    img{
+        max-width: 74px;
+        transition: all .6s ease-in-out;
+    }
+    img:hover{
+        transform: scale(1.2);
+    }
+    .to-tip{
+        visibility: hidden;
+        position: absolute;
+        width: table;
+        top: 8px;
+        left: -200px;
+        background-color: $black-normal;
+        color: $white-normal;
+        font-weight: 400;
+        transition: all .3s ease-in-out;
+        padding: 7px 14px;
+        border-radius: 6px;
+        opacity: 0;
+    }
+}
+.btn-zap:hover .to-tip{
+    visibility: visible;
+    opacity: 1;
+}
+@media screen and (max-width: 768px) {
+    .btn-zap{
+       img{
+        max-width: 48px;
+       }
+    }
+    
+}

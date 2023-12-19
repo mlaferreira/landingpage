@@ -4,6 +4,7 @@
     <meta charset="UTF-8">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LandingPage Profissional- aula youtube</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -14,23 +15,26 @@
     <div class="bg-home">
         <header>
             <nav class="header-content container">
-                <div class="header-icons">
+                <div class="header-icons" data-aos="fade-down">
                     <a href="#"><i class='bx bxl-instagram'></i></a>
                     <a href="#"><i class='bx bxl-facebook' ></i></a>
                     <a href="#"><i class='bx bxl-tiktok' ></i></a>
                     <a href="#"><i class='bx bxl-twitter' ></i></a>
                 </div>
-                <div class="header-logo">
-                    <img src="assets/logo.svg" alt="logo">
+                <div class="header-logo" data-aos="fade-up" data-aos-deLay="300">
+                    <img src="assets/logo.svg" alt="logo"  
+                    data-aos="flip-up"
+                    data-aos-deLay="300"
+                    data-aos-duration="1500">
                 </div>
-                <div class="box-btn">
+                <div class="box-btn"  data-aos="fade-down">
                     <a href="#" class="header-button">
                         Agendar horário
                     </a>
                 </div>                
             </nav>
 
-            <main class="hero container">
+            <main class="hero container" data-aos="fade-up" data-aos-deLay="400">
                 <h1>estilo é um reflexo da sua atitude e sua personalidade.</h1>
                 <p>Horário de funcionamento: 09:00h ás 19:00h</p>
                 <a href="#" class="btn-contact" target="_blank">Agendar horáio</a>
@@ -40,10 +44,10 @@
 
     <section class="about">
         <div class="about-content container">
-            <div class="about-img">
+            <div class="about-img" data-aos="fade-right" data-aos-deLay="500">
                 <img src="assets/images.svg" alt="imagem sobre a barbearia">
             </div>
-            <div class="about-description">
+            <div class="about-description" data-aos="fade-left" data-aos-deLay="550">
                 <h2>Sobre</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id maiores, distinctio velit similique sint 
                     laudantium neque et alias deleniti repellendus consequuntur repudiandae magni, beatae officia aperiam iste 
@@ -58,7 +62,7 @@
 
     </section>
 
-    <section class="services">
+    <section class="services" data-aos="zoom-in">
        <div class="services-content container">
         <h2>Serviços</h2>
         <p>Estilo moderno e contornos precisos definem nosso serviço de corte de cabelo. Para uma expressão única de virilidade, 
@@ -68,7 +72,7 @@
        </div>
 
        <section class="haircuts container">
-        <figure class="haircut">
+        <figure class="haircut" data-aos="zoom-in-up" data-aos-deLay="300">
             <img src="assets/corte1.png" alt="Corte normal">
             <figcaption class="haircut-info">
                 <h3>Corte Normal</h3>
@@ -78,7 +82,7 @@
                 
             </figcaption>
         </figure>
-        <figure class="haircut">
+        <figure class="haircut" data-aos="zoom-in-up" data-aos-deLay="400">
             <img src="assets/corte2.png" alt="Barba Completa">
             <figcaption class="haircut-info">
                 <h3>Barba Completa</h3>
@@ -88,7 +92,7 @@
                 
             </figcaption>
         </figure>
-        <figure class="haircut">
+        <figure class="haircut" data-aos="zoom-in-up" data-aos-deLay="500">
             <img src="assets/corte3.png" alt="Corte e Barba">
             <figcaption class="haircut-info">
                 <h3>Corte & Barba</h3>
@@ -130,6 +134,13 @@
 
     </footer>
 
-<script src="assets/js/main.js"></script>
+    <a href="https://api.whatsapp.com/send?phone=81900000000&text=Quero agendar um horário" 
+    class="btn-zap"
+    target="_blank">
+        <img src="assets/whatssapp.svg" alt="icon do whatssap">
+        <span class="to-tip">Agende seu horário</span>
+    </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
